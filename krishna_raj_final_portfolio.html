@@ -1,0 +1,354 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0d0b;--ink2:#1a1a17;--ink3:#252520;
+  --paper:#f5f3ee;--surface:#ffffff;
+  --accent:#0F6E56;--accent2:#5DCAA5;--accent3:#E1F5EE;
+  --warm:#854F0B;--warm2:#FAEEDA;
+  --rule:#d8d5cc;--muted:#6b6966;--muted2:#9a9690;
+  --syne:'Syne',sans-serif;--inter:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{font-family:var(--inter);background:var(--paper);color:var(--ink);line-height:1.6;}
+
+nav{background:var(--ink);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:52px;}
+.nb{font-family:var(--syne);font-size:15px;font-weight:800;color:var(--paper);text-decoration:none;letter-spacing:.02em;}
+.nl{display:flex;gap:1.75rem;list-style:none;}
+.nl a{font-family:var(--mono);font-size:10px;color:var(--muted2);text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:color .15s;}
+.nl a:hover{color:var(--accent2);}
+
+.hero{background:var(--ink);padding:4.5rem 2.5rem 3rem;}
+.hi{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;}
+.htag{font-family:var(--mono);font-size:10px;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:10px;}
+.htag::before{content:'';width:28px;height:1px;background:var(--accent2);}
+h1{font-family:var(--syne);font-size:5.2rem;font-weight:800;color:var(--paper);letter-spacing:-.045em;line-height:.92;margin-bottom:1.6rem;}
+h1 .light{font-weight:400;color:#3d3d37;}
+.hsub{font-size:13.5px;color:var(--muted2);max-width:430px;line-height:1.85;margin-bottom:2rem;}
+.hcontacts{display:flex;flex-wrap:wrap;gap:7px;}
+.hc{font-family:var(--mono);font-size:10.5px;color:var(--muted2);border:1px solid #2a2a25;padding:5px 14px;border-radius:2px;text-decoration:none;transition:all .15s;letter-spacing:.02em;}
+.hc:hover{border-color:var(--accent2);color:var(--accent2);}
+.hnum{text-align:right;padding-bottom:4px;}
+.bn{font-family:var(--syne);font-size:5rem;font-weight:800;color:var(--accent2);line-height:1;}
+.bl{font-family:var(--mono);font-size:9px;color:#3d3d37;letter-spacing:.1em;text-transform:uppercase;margin-top:5px;}
+
+.sbar{background:var(--ink2);border-top:1px solid #252520;padding:1.2rem 2.5rem;}
+.sbi{max-width:900px;margin:0 auto;display:flex;gap:0;flex-wrap:wrap;}
+.st{display:flex;flex-direction:column;padding:0 2.5rem 0 0;margin-right:2.5rem;border-right:1px solid #2a2a25;}
+.st:last-child{border-right:none;}
+.stn{font-family:var(--syne);font-size:1.35rem;font-weight:700;color:var(--paper);}
+.stl{font-size:11px;color:#4a4a44;margin-top:1px;}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 2.5rem;}
+
+.sec{padding:3.5rem 0;border-top:1px solid var(--rule);}
+.sh{display:grid;grid-template-columns:140px 1fr;gap:2rem;margin-bottom:2.5rem;align-items:baseline;}
+.si{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;padding-top:4px;}
+h2{font-family:var(--syne);font-size:1.55rem;font-weight:700;letter-spacing:-.03em;color:var(--ink);}
+
+.er{display:grid;grid-template-columns:140px 1fr;gap:2rem;padding-bottom:2.5rem;margin-bottom:2.5rem;border-bottom:1px solid var(--rule);}
+.er:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0;}
+.ep{font-family:var(--mono);font-size:9.5px;color:var(--muted);letter-spacing:.04em;margin-bottom:7px;text-transform:uppercase;}
+.eco{font-family:var(--syne);font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.eloc{font-size:11px;color:var(--muted);}
+.erl{font-family:var(--syne);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:9px;letter-spacing:-.01em;}
+.ebl{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.ebl li{font-size:13px;color:var(--muted);padding-left:18px;position:relative;line-height:1.75;}
+.ebl li::before{content:'→';position:absolute;left:0;font-size:10px;color:var(--accent);top:4px;}
+.hl{color:var(--accent);font-weight:500;}
+.hlw{color:var(--warm);font-weight:500;}
+
+.skc{display:grid;grid-template-columns:140px 1fr;gap:2rem;}
+.skb{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.sg{border:1px solid var(--rule);border-radius:3px;padding:1.1rem 1.2rem;background:var(--surface);}
+.sgt{font-family:var(--mono);font-size:9.5px;color:var(--accent);letter-spacing:.09em;text-transform:uppercase;margin-bottom:.7rem;padding-bottom:.5rem;border-bottom:1px solid var(--accent3);}
+.tgs{display:flex;flex-wrap:wrap;gap:5px;}
+.tg{font-size:11px;background:var(--paper);border:1px solid var(--rule);color:var(--muted);padding:2px 9px;border-radius:2px;}
+
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.pc{border:1px solid var(--rule);border-radius:3px;padding:1.4rem;display:flex;flex-direction:column;background:var(--surface);transition:border-color .15s;}
+.pc:hover{border-color:var(--accent);}
+.pb{font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:2px;display:inline-block;margin-bottom:.85rem;align-self:flex-start;}
+.pb.ieee{background:var(--warm2);color:var(--warm);}
+.pb.ac{background:var(--accent3);color:var(--accent);}
+.pn{font-family:var(--syne);font-size:13.5px;font-weight:700;letter-spacing:-.01em;margin-bottom:.4rem;color:var(--ink);}
+.pd{font-size:12px;color:var(--muted);line-height:1.7;flex:1;margin-bottom:.75rem;}
+.pl{font-family:var(--mono);font-size:10.5px;color:var(--accent);text-decoration:none;}
+
+.el{display:flex;flex-direction:column;gap:.7rem;}
+.ei{display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;border:1px solid var(--rule);border-radius:3px;padding:1rem 1.25rem;background:var(--surface);}
+.ed{font-family:var(--syne);font-size:13px;font-weight:700;color:var(--ink);}
+.es{font-size:11.5px;color:var(--muted);margin-top:2px;}
+.eg{font-family:var(--mono);font-size:11.5px;color:var(--accent);background:var(--accent3);padding:3px 12px;border-radius:2px;white-space:nowrap;}
+.ey{font-family:var(--mono);font-size:9.5px;color:var(--muted);text-align:right;margin-top:3px;}
+
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:.7rem;}
+.ci{display:flex;align-items:flex-start;gap:11px;border:1px solid var(--rule);border-radius:3px;padding:.95rem 1.1rem;background:var(--surface);transition:border-color .15s;}
+.ci:hover{border-color:var(--accent);}
+.cico{width:30px;height:30px;border-radius:3px;background:var(--accent3);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.cn{font-family:var(--syne);font-size:12px;font-weight:700;margin-bottom:2px;color:var(--ink);}
+.co{font-family:var(--mono);font-size:9.5px;color:var(--muted);}
+
+.compg{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;}
+.cpit{display:flex;align-items:flex-start;gap:9px;border:1px solid var(--rule);border-radius:3px;padding:.85rem 1rem;background:var(--surface);font-size:12.5px;color:var(--muted);}
+.cdot{width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:8px;flex-shrink:0;}
+
+footer{background:var(--ink);padding:2rem 2.5rem;margin-top:4rem;}
+.fi{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.fn{font-family:var(--syne);font-size:14px;font-weight:800;color:var(--paper);}
+.fc{font-family:var(--mono);font-size:10px;color:#4a4a44;margin-top:4px;}
+.ob{font-family:var(--mono);font-size:9.5px;color:var(--accent2);border:1px solid #1D9E75;padding:5px 14px;border-radius:2px;letter-spacing:.05em;text-transform:uppercase;}
+
+@media(max-width:640px){
+  h1{font-size:3rem;}
+  .hi{grid-template-columns:1fr;}
+  .hnum{display:none;}
+  .sh,.er,.skc{grid-template-columns:1fr;}
+  .skb,.pg,.compg{grid-template-columns:1fr;}
+  .wrap{padding:0 1.25rem;}
+  nav{padding:0 1.25rem;}
+  .sbar{padding:1rem 1.25rem;}
+}
+</style>
+
+<nav>
+  <a class="nb" href="#">KR</a>
+  <ul class="nl">
+    <li><a href="#exp">experience</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#proj">projects</a></li>
+    <li><a href="#edu">education</a></li>
+    <li><a href="#certs">certs</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hi">
+    <div>
+      <div class="htag">IT Support · Tech Support · Network Engineer</div>
+      <h1>Krishna<br><span class="light">Raj</span></h1>
+      <p class="hsub">IT Support professional with 2+ years of experience in technical troubleshooting, incident management, and service desk operations. Skilled in SLA compliance, escalation handling, root cause analysis, and end-user support via voice, chat, and email. Consistently maintains high CSAT scores.</p>
+      <div class="hcontacts">
+        <a class="hc" href="mailto:kr96806@gmail.com">kr96806@gmail.com</a>
+        <a class="hc" href="tel:+919792871189">+91-9792871189</a>
+        <span class="hc">Greater Noida, UP</span>
+        <a class="hc" href="https://linkedin.com/in/krishnaraj22" target="_blank">linkedin.com/in/krishnaraj22</a>
+      </div>
+    </div>
+    <div class="hnum">
+      <div class="bn">2+</div>
+      <div class="bl">years in tech</div>
+    </div>
+  </div>
+</div>
+
+<div class="sbar">
+  <div class="sbi">
+    <div class="st"><span class="stn">100+</span><span class="stl">L1 tickets / week</span></div>
+    <div class="st"><span class="stn">15%</span><span class="stl">ML accuracy boost</span></div>
+    <div class="st"><span class="stn">30%</span><span class="stl">ramp-up time saved</span></div>
+    <div class="st"><span class="stn">93%</span><span class="stl">CNN model accuracy</span></div>
+    <div class="st" style="border-right:none;"><span class="stn">High</span><span class="stl">CSAT maintained</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section class="sec" id="exp">
+  <div class="sh">
+    <span class="si">01 / experience</span>
+    <h2>Work history</h2>
+  </div>
+
+  <div class="er">
+    <div>
+      <div class="ep">May 2024 – Present</div>
+      <div class="eco">TELUS Digital</div>
+      <div class="eloc">Xavient Software Solutions · Noida</div>
+    </div>
+    <div>
+      <div class="erl">Annotation Analyst — Technical Support</div>
+      <ul class="ebl">
+        <li>Delivered end-user technical support for system, software, and network issues on Windows & Mac OS; diagnosed root causes using <span class="hl">Task Manager, Event Viewer, and Msconfig</span>.</li>
+        <li>Resolved hardware and peripheral issues (printers, scanners, connected devices) and network faults (Wi-Fi, LAN, IP configuration, DNS) ensuring minimal user downtime.</li>
+        <li>Managed high-volume support requests in ticketing systems with full <span class="hl">SLA adherence</span>; escalated unresolved issues to L2/L3 teams per defined protocols.</li>
+        <li>Handled escalations via voice, chat, and email; maintained consistently <span class="hl">high CSAT scores</span> through timely, accurate issue resolution.</li>
+        <li>Collaborated cross-functionally to improve workflows; contributed to a <span class="hl">15% improvement in operational accuracy</span>.</li>
+        <li>Authored SOPs, runbooks, and knowledge base articles; mentored new hires, reducing team ramp-up time by <span class="hl">30%</span>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="er">
+    <div>
+      <div class="ep">Oct 2023 – Apr 2024</div>
+      <div class="eco">Movidu Technology</div>
+      <div class="eloc">Noida</div>
+    </div>
+    <div>
+      <div class="erl">Technical Support Intern</div>
+      <ul class="ebl">
+        <li>Handled <span class="hl">100+ L1 support tickets weekly</span> covering Windows OS errors, hardware faults, and networking issues via chat and email with a customer-first approach.</li>
+        <li>Resolved Windows OS issues (login failures, updates, performance degradation) and peripheral faults; escalated complex cases with full documentation per SOP.</li>
+        <li>Maintained knowledge base articles for recurring issues, reducing repeat ticket volume and improving <span class="hl">first-call resolution (FCR) rate</span>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills">
+  <div class="skc">
+    <div>
+      <div class="si" style="padding-top:3px;">02 / skills</div>
+      <h2 style="margin-top:.5rem;">Tools &amp; tech</h2>
+    </div>
+    <div class="skb">
+      <div class="sg">
+        <div class="sgt">IT Support & ITSM</div>
+        <div class="tgs"><span class="tg">Helpdesk</span><span class="tg">Service Desk</span><span class="tg">Incident Mgmt</span><span class="tg">Ticketing Systems</span><span class="tg">SLA Compliance</span><span class="tg">CSAT</span><span class="tg">FCR</span><span class="tg">Escalation L1/L2/L3</span></div>
+      </div>
+      <div class="sg">
+        <div class="sgt">Operating Systems</div>
+        <div class="tgs"><span class="tg">Windows 10/11</span><span class="tg">Mac OS</span><span class="tg">Linux CLI</span><span class="tg">Registry</span><span class="tg">Group Policy</span><span class="tg">Safe Mode</span></div>
+      </div>
+      <div class="sg">
+        <div class="sgt">Networking</div>
+        <div class="tgs"><span class="tg">TCP/IP</span><span class="tg">DNS</span><span class="tg">DHCP</span><span class="tg">Wi-Fi / LAN</span><span class="tg">VPN Basics</span><span class="tg">IP Configuration</span></div>
+      </div>
+      <div class="sg">
+        <div class="sgt">Diagnostic Tools</div>
+        <div class="tgs"><span class="tg">Task Manager</span><span class="tg">Event Viewer</span><span class="tg">Msconfig</span><span class="tg">RDP</span><span class="tg">Device Manager</span></div>
+      </div>
+      <div class="sg">
+        <div class="sgt">Hardware</div>
+        <div class="tgs"><span class="tg">Desktops & Laptops</span><span class="tg">Printers</span><span class="tg">Scanners</span><span class="tg">Peripheral Devices</span></div>
+      </div>
+      <div class="sg">
+        <div class="sgt">Other</div>
+        <div class="tgs"><span class="tg">Active Directory</span><span class="tg">Python</span><span class="tg">SQL</span><span class="tg">Excel</span><span class="tg">PowerPoint</span><span class="tg">SaaS & Cloud</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="proj">
+  <div class="sh">
+    <span class="si">03 / projects</span>
+    <h2>Built things</h2>
+  </div>
+  <div class="pg">
+    <div class="pc">
+      <span class="pb ieee">IEEE Publication · 2024</span>
+      <div class="pn">Brain Tumor Detection via Image Segmentation</div>
+      <div class="pd">CNN-based model built with Python & OpenCV achieving <strong>93% accuracy</strong> in detecting brain tumors from MRI scans. Published in IEEE — practical AI applied to healthcare diagnostics.</div>
+      <a class="pl" href="#">View IEEE Publication →</a>
+    </div>
+    <div class="pc">
+      <span class="pb ac">Academic Project</span>
+      <div class="pn">Face Recognition Attendance System</div>
+      <div class="pd">Real-time attendance automation using OpenCV & LBPH algorithm. Captures student images via webcam, stores records in a database, and updates attendance live — reducing manual effort by <strong>80%</strong>.</div>
+    </div>
+    <div class="pc">
+      <span class="pb ac">Academic Project</span>
+      <div class="pn">Online E-Examination System</div>
+      <div class="pd">Full-stack secure exam platform with automated grading, real-time proctoring, question bank management, user authentication, and result generation.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="edu">
+  <div class="sh">
+    <span class="si">04 / education</span>
+    <h2>Academic background</h2>
+  </div>
+  <div class="el">
+    <div class="ei">
+      <div>
+        <div class="ed">B.Tech — Computer Science & Engineering</div>
+        <div class="es">Galgotias University, Greater Noida</div>
+      </div>
+      <div style="text-align:right">
+        <div class="eg">CGPA 7.96</div>
+        <div class="ey">2020 – 2024</div>
+      </div>
+    </div>
+    <div class="ei">
+      <div>
+        <div class="ed">Senior Secondary (Class XII) — CBSE</div>
+        <div class="es">BBS International School, Prayagraj</div>
+      </div>
+      <div style="text-align:right">
+        <div class="eg">74%</div>
+        <div class="ey">2018 – 2020</div>
+      </div>
+    </div>
+    <div class="ei">
+      <div>
+        <div class="ed">Secondary (Class X) — CBSE</div>
+        <div class="es">BBS Vidya Mandir, Prayagraj</div>
+      </div>
+      <div style="text-align:right">
+        <div class="eg">78.1%</div>
+        <div class="ey">2016 – 2018</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="certs">
+  <div class="sh">
+    <span class="si">05 / certifications</span>
+    <h2>Credentials & achievements</h2>
+  </div>
+  <div class="cg">
+    <div class="ci">
+      <div class="cico">🌐</div>
+      <div><div class="cn">Introduction to Modern AI</div><div class="co">Cisco · 2025</div></div>
+    </div>
+    <div class="ci">
+      <div class="cico">📈</div>
+      <div><div class="cn">Forward Program</div><div class="co">McKinsey & Company · 2025</div></div>
+    </div>
+    <div class="ci">
+      <div class="cico">📄</div>
+      <div><div class="cn">Research Publication — IEEE</div><div class="co">Dynamic Event-Based Optical Identification & Tracking · 2024</div></div>
+    </div>
+    <div class="ci">
+      <div class="cico">🏅</div>
+      <div><div class="cn">GMT Co-ordinator</div><div class="co">Galgotias University</div></div>
+    </div>
+    <div class="ci">
+      <div class="cico">🏆</div>
+      <div><div class="cn">Head Boy</div><div class="co">BBS School, Prayagraj</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="margin-bottom:1rem;">
+  <div class="sh">
+    <span class="si">06 / competencies</span>
+    <h2>Core competencies</h2>
+  </div>
+  <div class="compg">
+    <div class="cpit"><div class="cdot"></div>Incident Management & Ticket Handling</div>
+    <div class="cpit"><div class="cdot"></div>SLA Compliance & CSAT Management</div>
+    <div class="cpit"><div class="cdot"></div>L1/L2 Troubleshooting — OS, Network, Hardware</div>
+    <div class="cpit"><div class="cdot"></div>Escalation Handling to L2/L3 Teams</div>
+    <div class="cpit"><div class="cdot"></div>End-User Support — Voice, Chat, Email</div>
+    <div class="cpit"><div class="cdot"></div>Root Cause Analysis & Diagnostics</div>
+    <div class="cpit"><div class="cdot"></div>SOP & Knowledge Base Authoring</div>
+    <div class="cpit"><div class="cdot"></div>Remote Desktop & On-Site Support</div>
+    <div class="cpit"><div class="cdot"></div>Cross-Functional Collaboration</div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="fi">
+    <div>
+      <div class="fn">Krishna Raj</div>
+      <div class="fc">kr96806@gmail.com · +91-9792871189 · Greater Noida, UP · linkedin.com/in/krishnaraj22</div>
+    </div>
+    <div class="ob">Open to opportunities</div>
+  </div>
+</footer>
